@@ -10,12 +10,12 @@ class bot(Client):
         config.read(config_file)
         name = name.lower()
         plugins = {'root': path.join(__package__, 'plugins')}
-        api_id = config.get('pyrogram', 'api_id')
-        api_hash = config.get('pyrogram', 'api_hash')
+        API_ID = config.get('pyrogram', 'api_id')
+        API_HASH = config.get('pyrogram', 'api_hash')
         super().__init__(
             name,
-            api_id=api_id,
-            api_hash=api_hash,
+            API_ID=api_id,
+            API_HASH=api_hash,
             config_file=config_file,
             workers=16,
             plugins=plugins,
